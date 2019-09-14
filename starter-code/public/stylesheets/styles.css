@@ -1,0 +1,33 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  
+  a {
+    color: #00B7FF; }
+  
+  .marg {
+    padding-left: 40vw;
+    padding-top: 15vh;
+  }
+  
+  .bg {
+    background-image: url(https://images2.alphacoders.com/480/480530.png);
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  .square {
+    background-color: whitesmoke;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    margin-left: 30vw;
+    margin-top: 15vh;
+    width: 30vw;
+    height: 30vh;
+    font-size: 18px;
+  }
+  
+  /*# sourceMappingURL=style.css.map */

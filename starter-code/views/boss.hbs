@@ -1,0 +1,25 @@
+<div class="bg">
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav">
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/private">Home</a></li>
+            <li><a href="/empleado/new">Añadir empleado</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="square">
+  <strong>Lista de empleados:</strong>
+<ul>
+  {{#each empleados as |empleado|}}
+  <li>
+    {{empleado.name}} {{empleado.lastname}} <br> Puesto: {{empleado.role}} <br>
+    <div>
+      <a href="empleado/{{empleado._id}}/edit" uk-icon="icon: pencil"></a>
+      <a href="/empleado/{{empleado._id}}/delete" uk-icon="icon: trash"></a>
+    </div> <br>
+  </li>
+  {{/each}}
+</ul>
+</div>
+</div>

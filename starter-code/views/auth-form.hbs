@@ -1,0 +1,68 @@
+<div class="bg">
+        <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-center">
+
+        <ul class="uk-navbar-nav">
+            <li><a href="/">Home</a></li>
+        </ul>
+
+    </div>
+</nav>
+<div class="square">
+  <form {{#if login}} action="/auth/login" {{else}} action="/auth/register" {{/if}} method="POST">
+  <div>
+    <label for="">
+      Email:
+      <input class="uk-input uk-form-width-medium uk-form-small" type="email" name="email">
+    </label>
+  </div><br>
+  <div>
+    <label for="">
+      password:
+      <input class="uk-input uk-form-width-medium uk-form-small" type="password" name="password">
+    </label>
+  </div> <br>
+
+  {{#unless login}}
+  <div>
+    <label for="">
+      Confirm password:
+      <input class="uk-input uk-form-width-medium uk-form-small" type="password" name="passwordConfirm">
+    </label>
+  </div> <br>
+
+  <div>
+    <label for="">
+      Name:
+      <input class="uk-input uk-form-width-medium uk-form-small" type="text" name="name">
+    </label>
+  </div><br>
+    <div>
+    <label for="">
+      Lastname:
+      <input class="uk-input uk-form-width-medium uk-form-small" type="text" name="lastname">
+    </label>
+  </div><br>
+  {{/unless}}
+
+  <button class="uk-button uk-button-default" type="submit">
+    {{#if login}}
+    Iniciar sesión
+    {{else}}
+    Crear cuenta
+    {{/if}}
+  </button>
+
+  {{#if err}}
+  <p style="color:red">{{err}}</p>
+  {{/if}}
+
+  {{#if login}}
+  <a href="/auth/register">Aun no tienes cuenta?</a>
+  {{else}}
+  <a href="/auth/login">Ya tienes cuenta?</a>
+  {{/if}}
+
+</form>
+</div>
+</div>
